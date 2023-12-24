@@ -1,32 +1,15 @@
-const Pet = () => {
-  return React.createElement("div", {}, [
-    React.createElement("h1", {}, props.name),
-    React.createElement("h2", {}, props.animal),
-    React.createElement("h2", {}, props.breed),
-  ]);
-};
+import { createRoot } from "react-dom";
+import Pet from "./Pet";
 
 const App = () => {
-  return React.createElement("div", {}, [
-    React.createElement("h1", {}, "Adopt Me!"),
-    React.createElement(Pet, {
-      name: "family dog",
-      animal: "Dog",
-      breed: "husky",
-    }),
-    React.createElement(Pet, {
-      name: "family dog",
-      animal: "Dog",
-      breed: "husky",
-    }),
-    React.createElement(Pet, {
-      name: "family dog",
-      animal: "Dog",
-      breed: "husky",
-    }),
-  ]);
+  <div>
+    <h1>Adpot Me</h1>
+    <Pet name="spot" animal="dog" breed="shepard" />
+    <Pet name="DOG" animal="dog" breed="mix" />
+    <Pet name="tiger" animal="cat" breed="Simese" />
+  </div>;
 };
 
 const container = document.getElementById("root");
-const root = ReactDOM.createRoot(container);
-root.render(React.createElement(App));
+const root = createRoot(container);
+root.render(<App />);
