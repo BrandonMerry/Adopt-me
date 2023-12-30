@@ -11,3 +11,6 @@ React figures out the minimal changes needed to be made to update the DOM & mina
 -components -
 if a unit of code is a single purpose, make it component
 if a page is getting too big, make it into smaller components (eg SearchParams) 90 lines is long for a component
+
+React Query - removes effects in your code, helps mainin minimal code
+React Query - is great for API request instead of useEffect
